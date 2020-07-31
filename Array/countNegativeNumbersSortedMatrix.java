@@ -12,3 +12,23 @@ class Solution {
         return cnt;
     }
 }
+
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+class Solution {
+    public int countNegatives(int[][] grid) {
+        int cnt =0;
+        for(int row = 0;row<grid.length;row++){
+            for(int col = 0;col<grid[0].length;col++){
+               if(grid[row][col]<0){
+                   cnt+= grid[0].length-col;
+                   break;
+               }
+            }
+        }
+        return cnt;
+    }
+}
